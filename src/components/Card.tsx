@@ -20,7 +20,7 @@ const sizeStyles: Record<CardSize, string> = {
 };
 
 export function Card({
-  size = "md",
+  size = "auto",
   width,
   height,
   className = "",

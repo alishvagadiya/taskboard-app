@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Modal } from "../components/Modal";
 import { Select, type SelectOption } from "../components/Select";
@@ -7,7 +7,8 @@ import { TextInput } from "../components/TextInput";
 import { TextArea } from "../components/TextArea";
 import { Badge } from "../components/Badge";
 import { Card } from "../components/Card";
-
+import { toast } from "../components/Toast";
+import { ToastContainer } from "../components/ToastStack";
 const priorityOptions: SelectOption[] = [
   { label: "Low", value: "low" },
   { label: "Medium", value: "medium" },
@@ -19,13 +20,13 @@ export default function Components() {
   const [priority, setPriority] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-
   // Simple inputs demo
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
   return (
     <div className="p-8 space-y-10">
+      <ToastContainer />
       {/* HEADER */}
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold text-gray-900">
@@ -133,6 +134,41 @@ export default function Components() {
           <Badge variant="info">New</Badge>
         </div>
       </section>
+      
+      {/* =========================
+          TOAST
+      ========================== */}
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Button varients</h2>
+
+        <div className="flex gap-2 flex-wrap">
+          <Button
+            onClick={() => toast.success("Task saved successfully")}
+          >
+            Success
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => toast.info("Just FYI update")}
+          >
+            Info
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => toast.warning("Just to warn you.")}
+          >
+            Warning
+          </Button>
+          <Button
+            variant="danger"
+            onClick={() => toast.error("Something went wrong")}
+          >
+            Error
+          </Button>
+
+        </div>
+      </section>
+      
       {/* =========================
           BUTTON
       ========================== */}
