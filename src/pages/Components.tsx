@@ -35,7 +35,7 @@ export default function Components() {
       </div>
 
       {/* =========================
-          MODAL 1: PRIORITY SELECT
+          SELECT
       ========================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Modal - Priority Selector</h2>
@@ -50,7 +50,7 @@ export default function Components() {
       </section>
 
       {/* =========================
-          MODAL 2: TASK FORM
+          MODAL
       ========================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Modal - Task Form</h2>
@@ -98,7 +98,7 @@ export default function Components() {
       </section>
 
       {/* =========================
-          INLINE INPUT DEMO
+          INPUT
       ========================== */}
       <section className="space-y-4">
         <h2 className="text-lg font-medium">Form Inputs</h2>
@@ -153,7 +153,7 @@ export default function Components() {
       </section>
 
       {/* =========================
-          CARD SYSTEM
+          CARD
       ========================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Card System</h2>
@@ -177,17 +177,18 @@ export default function Components() {
             </div>
           </Card>
 
+          <Card width="220px" height="180px">
+            <div className="h-full flex items-center justify-center">
+              Custom width and height
+            </div>
+          </Card>
+          
           <Card size="full" height="120px">
             <div className="h-full flex items-center justify-center">
               Full Width
             </div>
           </Card>
 
-          <Card width="220px" height="180px">
-            <div className="h-full flex items-center justify-center">
-              Custom
-            </div>
-          </Card>
         </div>
       </section>
     </div>
